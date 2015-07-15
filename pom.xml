@@ -10,7 +10,7 @@
     <groupId>org.world-engine</groupId>
     <artifactId>worldengine-java</artifactId>
     <packaging>jar</packaging>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <name>worldengine-java</name>
     <description>WorldEngine file loading library for Java</description>
     <url>https://github.com/ftomassetti/worldengine-java</url>
