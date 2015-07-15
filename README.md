@@ -7,3 +7,13 @@ Using this library is very simple. Include the jar (it is not currently availabl
 ```java
 WorldFile.World worldFile = WorldFileLoader.fromInputStream(is);
 ```
+
+## Maven
+
+```xml
+<dependency>
+    <groupId>org.world-engine</groupId>
+    <artifactId>worldengine-java</artifactId>
+    <version>1.0</version>
+</dependency>
+```      
