@@ -1,63 +1,95 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.world-engine</groupId>
-  <artifactId>worldengine-java</artifactId>
-  <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>worldengine-java</name>
-  <url>https://github.com/ftomassetti/worldengine-java</url>
-  
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.google.protobuf</groupId>
-      <artifactId>protobuf-java</artifactId>
-      <version>2.6.1</version>
-    </dependency>
-  </dependencies>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <build>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-      </resource>
-    </resources>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.1</version>
-            <executions>
-                <execution>
-                    <id>default-compile</id>
-                    <configuration>
-                        <showDeprecation>true</showDeprecation>
-                        <showWarnings>true</showWarnings>
-                        <compilerArguments>
-                            <source>1.8</source>
-                            <target>1.8</target>
-                        </compilerArguments>
-                    </configuration>
-                </execution>
-                <execution>
-                    <id>default-testCompile</id>
-                    <configuration>
-                        <showDeprecation>true</showDeprecation>
-                        <showWarnings>true</showWarnings>
-                        <compilerArguments>
-                            <source>1.8</source>
-                            <target>1.8</target>
-                        </compilerArguments>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
-    </plugins>
-  </build>
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
+    <groupId>org.world-engine</groupId>
+    <artifactId>worldengine-java</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>worldengine-java</name>
+    <description>WorldEngine file loading library for Java</description>
+    <url>https://github.com/ftomassetti/worldengine-java</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:git:git@github.com:ftomassetti/worldengine-java.git</connection>
+        <developerConnection>scm:git:git@github.com:ftomassetti/worldengine-java.git</developerConnection>
+        <url>https://github.com/ftomassetti/worldengine-java.git</url>
+        <tag>HEAD</tag>
+    </scm>
+    <developers>
+        <developer>
+            <name>Federico Tomassetti</name>
+        </developer>
+        <developer>
+            <name>Bret Curtis</name>
+        </developer>
+    </developers>
+    <issueManagement>
+        <system>GitHub Issue Tracker</system>
+        <url>https://github.com/ftomassetti/worldengine-java/issues</url>
+    </issueManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>2.6.1</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <executions>
+                    <execution>
+                        <id>default-compile</id>
+                        <configuration>
+                            <showDeprecation>true</showDeprecation>
+                            <showWarnings>true</showWarnings>
+                            <compilerArguments>
+                                <source>1.8</source>
+                                <target>1.8</target>
+                            </compilerArguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>default-testCompile</id>
+                        <configuration>
+                            <showDeprecation>true</showDeprecation>
+                            <showWarnings>true</showWarnings>
+                            <compilerArguments>
+                                <source>1.8</source>
+                                <target>1.8</target>
+                            </compilerArguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
